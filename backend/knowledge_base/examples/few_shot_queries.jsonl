@@ -1,0 +1,5 @@
+{"doc_type": "example", "question": "Tampilkan 5 customer dengan total order terbanyak", "sql": "SELECT c.name, COUNT(o.id) AS total_orders FROM customers c JOIN orders o ON c.id = o.customer_id GROUP BY c.name ORDER BY total_orders DESC LIMIT 5", "tables_used": ["customers", "orders"]}
+{"doc_type": "example", "question": "Berapa total revenue bulan ini?", "sql": "SELECT SUM(total_price) AS revenue FROM orders WHERE status = 'completed' AND created_at >= DATE_TRUNC('month', CURRENT_DATE)", "tables_used": ["orders"]}
+{"doc_type": "example", "question": "Produk apa yang paling banyak dipesan?", "sql": "SELECT p.name, SUM(o.quantity) AS total_qty FROM products p JOIN orders o ON p.id = o.product_id GROUP BY p.name ORDER BY total_qty DESC LIMIT 10", "tables_used": ["products", "orders"]}
+{"doc_type": "example", "question": "Tampilkan semua customer dari Jakarta", "sql": "SELECT name, email, city FROM customers WHERE city = 'Jakarta'", "tables_used": ["customers"]}
+{"doc_type": "example", "question": "Berapa rata-rata nilai order?", "sql": "SELECT ROUND(AVG(total_price), 2) AS avg_order_value FROM orders WHERE status = 'completed'", "tables_used": ["orders"]}

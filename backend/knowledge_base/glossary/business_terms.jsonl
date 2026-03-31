@@ -1,0 +1,4 @@
+{"doc_type": "glossary", "term": "revenue", "definition": "Total pendapatan dari order yang completed = SUM(orders.total_price) WHERE status = 'completed'", "related_tables": ["orders"]}
+{"doc_type": "glossary", "term": "active customer", "definition": "Customer yang memiliki minimal 1 order dalam 30 hari terakhir", "related_tables": ["customers", "orders"]}
+{"doc_type": "glossary", "term": "best seller", "definition": "Product dengan jumlah order terbanyak (COUNT orders)", "related_tables": ["products", "orders"]}
+{"doc_type": "glossary", "term": "average order value", "definition": "Rata-rata nilai order = AVG(orders.total_price)", "related_tables": ["orders"]}
